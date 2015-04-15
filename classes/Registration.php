@@ -68,7 +68,7 @@ class Registration
             
             //pdo
             try {
-            	$this->db_connection =  new PDO('pgsql:host='.DB_HOST.';port=5432;dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
+            	$this->db_connection =  new PDO('pgsql:host='.DB_HOST.';port=5432;dbname='.DB_NAME.';', DB_USER, DB_PASS);
             	
             	$user_name = strip_tags($_POST['user_name'], ENT_QUOTES);
             	$user_email = strip_tags($_POST['user_email'], ENT_QUOTES);

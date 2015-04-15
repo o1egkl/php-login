@@ -26,7 +26,7 @@ class Stats
     	//pdo
     	try
     	{
-    		$this->db_connection =  new PDO('pgsql:host='.DB_HOST.';port=5432;dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
+    		$this->db_connection =  new PDO('pgsql:host='.DB_HOST.';port=5432;dbname='.DB_NAME.';', DB_USER, DB_PASS);
     	
     	}
     	catch(PDOException $e)
