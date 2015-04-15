@@ -42,25 +42,9 @@ else
 
 // get country and city
 
-
-include('ip2locationlite.class.php');
-//Load the class
-$ipLite = new ip2location_lite;
-$ipLite->setKey('API_KEY');
- 
-//Get errors and locations
-$locations = $ipLite->getCity($ip);
-$errors = $ipLite->getError();
- 
-//Getting the result
-if (!empty($locations) && is_array($locations)) {
-  foreach ($locations as $field => $val) {
-  	if ($field == 'countryName')
-  		$country = $val;
-    if ($field == 'cityName')
-  		$city = $val;
-  }
-}
+$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+$city = $details->city;
+$country = $details->country;
 
 // insert into db
 date_default_timezone_set('Asia/Jerusalem');
