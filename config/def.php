@@ -12,9 +12,9 @@
  * DB_PASS: the password of the above user
  */
 define("HTTP_SERVER_HOST","localhost");
-define("DB_HOST",HTTP_SERVER_HOST);
-define("DB_NAME", "admin");
-define("DB_USER", "root");
-define("DB_PASS", "");
+define("DB_HOST","ec2-107-22-166-233.compute-1.amazonaws.com");
+define("DB_NAME", "d7u117at9rn0sp");
+define("DB_USER", "jfzwjoocgyrjpc");
+define("DB_PASS", "THGeXjCzH2fiJ9e2zYqJidTkP");
 
 
