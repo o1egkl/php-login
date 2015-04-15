@@ -67,17 +67,17 @@ date_default_timezone_set('Asia/Jerusalem');
 $date = date("Y-m-d");
 $time = date("H:i:s");
 
-$query = "insert into `tracker` (`country`,`city`,`date`, `time`, `ip`, `query_string`, `http_referer`, `http_user_agent`, `isbot`, `page`) 
+$query = "insert into tracker ('country','city','date', 'time', 'ip', 'query_string', 'http_referer', 'http_user_agent', 'isbot', 'page') 
 values ('$country','$city','$date', '$time', '$ip', '$query_string', '$http_referer' ,'$http_user_agent' , $isbot, '$page')";
-$result = $db_connection->exec($query);
+
 
 
 //pdo
 $db_connection =  new PDO('pgsql:host='.DB_HOST.';port=5432;dbname='.DB_NAME.';', DB_USER, DB_PASS);
-
+$result = $db_connection->exec($query);
 // if no connection errors (= working database connection)
 $sql = "select distinct ip from tracker";
-$result = $db_connection->exec($query);
+$result = $db_connection->query($sql);
 echo $query;
 
 ?>
