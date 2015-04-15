@@ -73,7 +73,7 @@ values ('$country','$city','$date', '$time', '$ip', '$query_string', '$http_refe
 
 
 //pdo
-$db_connection =  new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
+$db_connection =  new PDO('pgsql:host='.DB_HOST.';port=5432;dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
 
 // if no connection errors (= working database connection)
 $sql = "select distinct ip from tracker";

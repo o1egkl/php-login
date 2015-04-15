@@ -15,7 +15,7 @@
 		//pdo
 		try
 		{
-			$db_connection =  new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
+			$db_connection =  new PDO('pgsql:host='.DB_HOST.';port=5432;dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
 			$query = "select distinct ip from tracker WHERE page LIKE "."'". htmlspecialchars($_GET['page'])."'";
 			$result = $db_connection->query($query);
 			if ($result->rowCount() > 0) {

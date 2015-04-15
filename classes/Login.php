@@ -57,7 +57,7 @@ class Login
 			
         	//PDO
             try {
-            	$this->db_connection =  new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
+            	$this->db_connection =  new PDO('pgsql:host='.DB_HOST.';port=5432;dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
             	/*** echo a message saying we have connected ***/
             	echo 'Connected to database<br />';
             	$user_name = strip_tags($_POST['user_name'],ENT_QUOTES);
