@@ -80,5 +80,4 @@ $sql = "select distinct ip from tracker";
 $result = $db_connection->exec($query);
 echo $query;
 
-var_dump( $_SERVER);
 ?>
