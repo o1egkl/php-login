@@ -12,6 +12,7 @@
 	<table border="1" style="width:80%;">
 		<tr>
 			<th>IP</th>
+			<th>Date</th>
 			<th>User agent</th>
 			<th>Country</th>
 			<th>City</th>
@@ -27,6 +28,7 @@
 			?>
 			<tr>
 				<td><?php echo $row['ip'];?></td>
+				<td><?php echo $row['date'];?></td>
 				<td><?php echo $row['http_user_agent'];?></td>
 				<td><?php echo $row['country'];?></td>
 				<td><?php echo $row['city'];?></td>
