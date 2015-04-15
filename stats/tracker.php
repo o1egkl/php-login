@@ -69,7 +69,7 @@ $time = date("H:i:s");
 
 $query = "insert into `tracker` (`country`,`city`,`date`, `time`, `ip`, `query_string`, `http_referer`, `http_user_agent`, `isbot`, `page`) 
 values ('$country','$city','$date', '$time', '$ip', '$query_string', '$http_referer' ,'$http_user_agent' , $isbot, '$page')";
-
+$result = $db_connection->exec($query);
 
 
 //pdo
