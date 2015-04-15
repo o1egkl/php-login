@@ -42,7 +42,7 @@
 <script language="javascript" type="text/javascript">
 
 setInterval(function(){
-	//	alert('refreshing');
+		alert('refreshing');
     $('#statistics').load('stats/stats_ajax.php?page=<?php echo $_GET['page'];?>');
 },6000);
 </script>
