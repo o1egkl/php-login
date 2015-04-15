@@ -2,7 +2,7 @@
 	
 	<a href="list.php">Back to list</a>
 	<br/><br/>
-	The number of unique visitors isss:
+	The number of unique visitors is (updated):
 	<?php
 	define("HTTP_SERVER_HOST","localhost");
 	define("DB_HOST","ec2-107-22-166-233.compute-1.amazonaws.com");
