@@ -1,4 +1,3 @@
-<!-- if you need user information, just put them into the $_SESSION variable and output them here -->
 <h1>List of LP's</h1>
 <ul>
 <?php $lp->doLpList();?>
