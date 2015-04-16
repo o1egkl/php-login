@@ -54,7 +54,7 @@ class Lp
     		while (false !== ($entry = readdir($handle))){
     			$pageName = substr($entry,0,strpos($entry,'.txt'));
     			if ($entry != "." && $entry != "..") {
-    				echo '<li><a href="edit.php?title='.$entry.'">'.$pageName.'</a>&nbsp;<a href="stats.php?page='.$pageName.'">Stats</a>&nbsp;<a href="https://dry-fjord-6400.herokuapp.com/'.$pageName.'" target="new">View LP</a></li>';
+    				echo '<li style="width:70%;"><a href="edit.php?title='.$entry.'">'.$pageName.'</a>&nbsp;<a href="stats.php?page='.$pageName.'">Stats</a>&nbsp;<a href="https://dry-fjord-6400.herokuapp.com/'.$pageName.'" target="new">View LP</a></li>';
     			}	
     		}
     	
