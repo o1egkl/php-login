@@ -51,7 +51,7 @@ class Lp
     public function doLpList()
     {
     	if ($handle = opendir('LP')) {
-    		while (false !== ($entry = readdir($handle))) {
+    		while (false !== ($entry = readdir($handle))){
     			if ($entry != "." && $entry != "..") {
     				echo '<li><a href="edit.php?title='.$entry.'">'.$entry.'</a>&nbsp;<a href="stats.php?page='.substr($entry,0,strpos($entry,'.php')).'">Stats</a></li>';
     			}	
