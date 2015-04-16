@@ -22,7 +22,7 @@ tinymce.init({
 <div style="width:50%;border:0px solid black;">
 <form method="post" name="form1" action="new.php" id="form1">
   	<label for="input_title">Title</label>
-    <input id="input_title" type="text" name="title" required value="<?= (!empty($lp->title))?substr($lp->title,0,strpos($lp->title,'.tpl')):'';?>"/>
+    <input id="input_title" type="text" name="title" required value="<?= (!empty($lp->title))?substr($lp->title,0,strpos($lp->title,'.lp')):'';?>"/>
     <br><br>
     <textarea name="text1" id="text1">
     <?php 
