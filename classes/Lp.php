@@ -38,7 +38,7 @@ class Lp
         }
         if(!empty($_POST['text1']) && !empty($_POST['title'])){
         	$html = $_POST['text1'];
-        	$file = $_POST['title'].'.lp';
+        	$file = $_POST['title'].'.txt';
         	file_put_contents('LP/'.$file, $html);
         	return true;
         }
@@ -53,7 +53,7 @@ class Lp
     	if ($handle = opendir('LP')) {
     		while (false !== ($entry = readdir($handle))) {
     			if ($entry != "." && $entry != "..") {
-    				echo '<li><a href="edit.php?title='.$entry.'">'.$entry.'</a>&nbsp;<a href="stats.php?page='.substr($entry,0,strpos($entry,'.lp')).'">Stats</a>&nbsp;<a href="https://dry-fjord-6400.herokuapp.com?page='.substr($entry,0,strpos($entry,'.lp')).'">View LP</a></li>';
+    				echo '<li><a href="edit.php?title='.$entry.'">'.$entry.'</a>&nbsp;<a href="stats.php?page='.substr($entry,0,strpos($entry,'.txt')).'">Stats</a>&nbsp;<a href="https://dry-fjord-6400.herokuapp.com?page='.substr($entry,0,strpos($entry,'.txt')).'">View LP</a></li>';
     			}	
     		}
     	
