@@ -52,8 +52,9 @@ class Lp
     {
     	if ($handle = opendir('LP')) {
     		while (false !== ($entry = readdir($handle))){
+    			$pageName = substr($entry,0,strpos($entry,'.txt'));
     			if ($entry != "." && $entry != "..") {
-    				echo '<li><a href="edit.php?title='.$entry.'">'.$entry.'</a>&nbsp;<a href="stats.php?page='.substr($entry,0,strpos($entry,'.txt')).'">Stats</a>&nbsp;<a href="https://dry-fjord-6400.herokuapp.com/'.substr($entry,0,strpos($entry,'.txt')).'" target="new">View LP</a></li>';
+    				echo '<li><a href="edit.php?title='.$entry.'">'.$pageName.'</a>&nbsp;<a href="stats.php?page='.$pageName.'">Stats</a>&nbsp;<a href="https://dry-fjord-6400.herokuapp.com/'.$pageName.'" target="new">View LP</a></li>';
     			}	
     		}
     	
